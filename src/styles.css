@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.marcador {
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 5em;
+}
+
+.marcador .logo {
+    width: 180px;
+}
+
+.marcador .logo.local img {
+    height: 180px;
+}
+
+.marcador .logo.visitante img {
+    width: 180px;
+}
+
+.nba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nba img {
+    margin: 0 0.5em;
+}
