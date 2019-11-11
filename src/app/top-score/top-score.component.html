@@ -1,0 +1,12 @@
+<table class="top">
+    <h1>Top Score</h1>
+    <tr *ngFor="let jugador of jugadores">
+        <td>
+            <img [src]="jugador.imagen">
+            {{jugador.nombre}}
+        </td>
+        <td>
+            {{jugador.puntos}}
+        </td>
+    </tr>
+</table>

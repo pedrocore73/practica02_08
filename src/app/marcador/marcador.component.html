@@ -3,11 +3,22 @@
         <img src="assets/LAL.svg" alt="Logo LA">
     </div>
     <div class="nba">
-        <span>00</span>
+        <span>{{puntosLocal | puntos}}</span>
         <img src="assets/NBA_Logo.svg" alt="Logo NBA">
-        <span>00</span>
+        <span>{{puntosVisitante | puntos}}</span>
     </div>
     <div class="logo visitante">
         <img src="assets/BOS.svg" alt="Logo Boston">
     </div>
 </div>
+<div class="jugadores">
+    <app-jugadores class="equipo" 
+                   [jugadores]="locales" 
+                   [equipo]="equipoLocal"
+                   (canasta)="getCanastas($event)"></app-jugadores>
+    <app-jugadores class="equipo" 
+                   [jugadores]="visitantes" 
+                   [equipo]="equipoVisitante"
+                   (canasta)="getCanastas($event)"></app-jugadores>
+</div>
+<app-top-score [jugadores]="jugadoresTop"></app-top-score>

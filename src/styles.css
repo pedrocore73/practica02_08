@@ -39,3 +39,93 @@ body {
 .nba img {
     margin: 0 0.5em;
 }
+
+.jugadores {
+    padding: 1em 2em;
+    display: flex;
+}
+
+.jugadores .equipo {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    font-size: 1.5em;
+}
+
+table td {
+    padding: 0.5em 1em;
+}
+
+table button {
+    font-size: 1em;
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    margin: 0 0.5em;
+    background-color: white;
+}
+
+table.lakers tr:nth-child(even) {
+    background-color: #FDB927;
+    color: #552583;
+}
+
+table.lakers tr:nth-child(odd) {
+    background-color: #552583;
+    color: white;
+}
+
+table.lakers button {
+    color: #552583;
+    border: solid 2px #552583;
+}
+
+table.celtics tr:nth-child(even) {
+    background-color: #BA9653;
+    color: #008248;
+}
+
+table.celtics tr:nth-child(odd) {
+    background-color: #008248;
+    color: white;
+}
+
+table.celtics button {
+    color: #008248;
+    border: solid 2px #008248;
+}
+
+table.top {
+    width: 60%;
+    margin: 0 auto;
+}
+
+table.top h1 {
+    text-align: center;
+    margin: 0.5em auto 1em;
+}
+
+table.top tr {
+    width: 100%;
+    display: flex;
+}
+
+table.top tr td {
+    border: solid 2px lightgrey;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+table.top tr td:nth-child(1) {
+    width: 80%;
+}
+
+table.top tr td:nth-child(2) {
+    width: 20%;
+}
+
+table.top tr td img {
+    height: 100px;
+}
