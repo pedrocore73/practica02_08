@@ -5,9 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PuntosPipe implements PipeTransform {
 
-  transform(value) {
+  transform(value, tresCh?) {
     let puntos;
-    puntos = ('0' + value).slice(-2);
+    if(tresCh) {
+      puntos = ('00' + value).slice(-3);
+    } else {
+      puntos = ('0' + value).slice(-2);
+    }
     return puntos;
   }
 

@@ -30,6 +30,8 @@ export class MarcadorComponent implements OnInit {
 
   puntosLocal = 0;
   puntosVisitante = 0;
+  tresCh = false;  // Detecta si un equipo tiene > 100 pts
+  tresChJugadores = false; // Detecta si un jugador idem
 
   constructor() { }
 
@@ -43,6 +45,7 @@ export class MarcadorComponent implements OnInit {
       this.locales.forEach( jugador =>{
         if(canasta.nombre === jugador.nombre){
           jugador.puntos += canasta.puntos;
+          if (jugador.puntos > 99) { this.tresChJugadores = true; }
         }
       })
     } else if (canasta.equipo === this.equipoVisitante) {
@@ -50,10 +53,14 @@ export class MarcadorComponent implements OnInit {
       this.visitantes.forEach( jugador =>{
         if(canasta.nombre === jugador.nombre){
           jugador.puntos += canasta.puntos;
+          if (jugador.puntos > 99) { this.tresChJugadores = true; }
         }
       })
     }
     this.setJugadoresTop();
+    if (this.puntosLocal > 99 || this.puntosVisitante > 99) {
+      this.tresCh = true;
+    }
   }
 
   setJugadoresTop() {

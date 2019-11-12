@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TopScoreComponent implements OnInit {
 
+  @Input() tresChJugadores;
   @Input() jugadores;
 
   constructor() { }
